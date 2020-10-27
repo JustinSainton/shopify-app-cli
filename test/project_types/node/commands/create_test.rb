@@ -234,10 +234,6 @@ module Node
 
       private
 
-      def expect_command(command, chdir: @context.root)
-        @context.expects(:system).with(*command, chdir: chdir)
-      end
-
       def perform_command
         run_cmd("create node \
           --name=test-app \
