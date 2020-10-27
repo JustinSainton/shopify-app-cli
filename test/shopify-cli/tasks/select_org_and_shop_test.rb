@@ -210,7 +210,7 @@ module ShopifyCli
           }
         )
         stub_shopify_org_confirmation(response: true)
-        Shopifolk.expects(:act_as_shopifolk)
+        # Shopifolk.expects(:act_as_shopifolk)
 
         form = call(org_id: 123, shop: nil)
 
