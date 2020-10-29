@@ -53,10 +53,10 @@ module ShopifyCli
     def shopifolk?
       return true if Feature.enabled?(FEATURE_NAME)
       if shopifolk_by_gcloud? && shopifolk_by_dev?
-        # ShopifyCli::Feature.enable(FEATURE_NAME)
+        ShopifyCli::Feature.enable(FEATURE_NAME)
         true
       else
-        # ShopifyCli::Feature.disable(FEATURE_NAME)
+        ShopifyCli::Feature.disable(FEATURE_NAME)
         false
       end
     end
